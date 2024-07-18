@@ -1,0 +1,95 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+body {
+    min-width: 320px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+}
+
+.list-reset {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.btn-reset {
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.container {
+    max-width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.gallery-container {
+    padding-top: 20px;
+    margin-bottom: 20px;
+}
+
+.gallery-title {
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.gallery-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px 20px;
+}
+
+.gallery-img {
+    height: 100%;
+}
+
+/* HTML: <div class="loader"></div> */
+.loader {
+    width: 50px;
+    --b: 8px;
+    margin: 0 auto;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    padding: 1px;
+    background: conic-gradient(#0000 10%, #f03355) content-box;
+    mask:
+        repeating-conic-gradient(#0000 0deg, #000 1deg 20deg, #0000 21deg 36deg),
+        radial-gradient(farthest-side, #0000 calc(100% - var(--b) - 1px), #000 calc(100% - var(--b)));
+    -webkit-mask:
+        repeating-conic-gradient(#0000 0deg, #000 1deg 20deg, #0000 21deg 36deg),
+        radial-gradient(farthest-side, #0000 calc(100% - var(--b) - 1px), #000 calc(100% - var(--b)));
+    -webkit-mask-composite: destination-in;
+    mask-composite: intersect;
+    animation: l4 1s infinite steps(10);
+    transition: opacity .3s linear;
+}
+
+@keyframes l4 {
+    to {
+        transform: rotate(1turn)
+    }
+}
+
+.loader-hidden {
+    opacity: 0;
+    height: 0;
+}

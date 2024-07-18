@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Фотогаллерея</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" type="module" defer></script>
+</head>
+
+<body>
+    <main>
+        <div class="container gallery-container">
+            <h1 class="gallery-title">Фотогаллерея с котиками. <span class="gallery-quantity"></span> картинок</h1>
+            <div class="loader"></div>
+            <ul class="gallery-list list-reset">
+
+                <!-- шаблон -->
+
+                <!-- <li class="gallery-item">
+                    <a href="#" data-fslightbox="gallery" class="gallery-link">
+                        <img src="#" alt="gallery-img" class="gallery-img">
+                    </a>
+                </li> -->
+
+                <!-- статичные изображения -->
+
+                <!-- <li class="gallery-item">
+                    <a href="/img/1.jpg" data-fslightbox="gallery" class="gallery-link">
+                        <img src="/img/1.jpg" alt="gallery-img" class="gallery-img">
+                    </a>
+                </li>
+                <li class="gallery-item">
+                    <a href="/img/2.jpg" data-fslightbox="gallery" class="gallery-link">
+                        <img src="/img/2.jpg" alt="gallery-img" class="gallery-img">
+                    </a>
+                </li>
+                <li class="gallery-item">
+                    <a href="/img/3.gif" data-fslightbox="gallery" class="gallery-link">
+                        <img src="/img/3.gif" alt="gallery-img" class="gallery-img">
+                    </a>
+                </li>
+                <li class="gallery-item">
+                    <a href="/img/4.jpg" data-fslightbox="gallery" class="gallery-link">
+                        <img src="/img/4.jpg" alt="gallery-img" class="gallery-img">
+                    </a>
+                </li>
+                <li class="gallery-item">
+                    <a href="/img/5.jpg" data-fslightbox="gallery" class="gallery-link">
+                        <img src="/img/5.jpg" alt="gallery-img" class="gallery-img">
+                    </a>
+                </li>
+                <li class="gallery-item">
+                    <a href="/img/6.jpg" data-fslightbox="gallery" class="gallery-link">
+                        <img src="/img/6.jpg" alt="gallery-img" class="gallery-img">
+                    </a>
+                </li>
+                <li class="gallery-item">
+                    <a href="/img/7.jpg" data-fslightbox="gallery" class="gallery-link">
+                        <img src="/img/7.jpg" alt="gallery-img" class="gallery-img">
+                    </a>
+                </li>
+                <li class="gallery-item">
+                    <a href="/img/8.png" data-fslightbox="gallery" class="gallery-link">
+                        <img src="/img/8.png" alt="gallery-img" class="gallery-img">
+                    </a>
+                </li>
+                <li class="gallery-item">
+                    <a href="/img/9.jpg" data-fslightbox="gallery" class="gallery-link">
+                        <img src="/img/9.jpg" alt="gallery-img" class="gallery-img">
+                    </a>
+                </li>
+                <li class="gallery-item">
+                    <a href="/img/10.jpg" data-fslightbox="gallery" class="gallery-link">
+                        <img src="/img/10.jpg" alt="gallery-img" class="gallery-img">
+                    </a>
+                </li> -->
+
+                <!-- с сылками -->
+
+                <!-- <li class="gallery-item">
+                    <a href="https://cdn2.thecatapi.com/images/2oh.gif" data-fslightbox="gallery" class="gallery-link">
+                        <img src="https://cdn2.thecatapi.com/images/2oh.gif" alt="gallery-img" class="gallery-img">
+                    </a>
+                </li>
+                <li class="gallery-item">
+                    <a href="https://cdn2.thecatapi.com/images/3h8.gif" data-fslightbox="gallery" class="gallery-link">
+                        <img src="https://cdn2.thecatapi.com/images/3h8.gif" alt="gallery-img" class="gallery-img">
+                    </a>
+                </li>
+                <li class="gallery-item">
+                    <a href="https://cdn2.thecatapi.com/images/4nc.jpg" data-fslightbox="gallery" class="gallery-link">
+                        <img src="https://cdn2.thecatapi.com/images/4nc.jpg" alt="gallery-img" class="gallery-img">
+                    </a>
+                </li>
+                <li class="gallery-item">
+                    <a href="https://cdn2.thecatapi.com/images/794.png" data-fslightbox="gallery" class="gallery-link">
+                        <img src="https://cdn2.thecatapi.com/images/794.png" alt="gallery-img" class="gallery-img">
+                    </a>
+                </li>
+                <li class="gallery-item">
+                    <a href="https://cdn2.thecatapi.com/images/MTkwNjY1MQ.jpg" data-fslightbox="gallery"
+                        class="gallery-link">
+                        <img src="https://cdn2.thecatapi.com/images/MTkwNjY1MQ.jpg" alt="gallery-img"
+                            class="gallery-img">
+                    </a>
+                </li>
+                <li class="gallery-item">
+                    <a href="https://cdn2.thecatapi.com/images/b14.jpg" data-fslightbox="gallery" class="gallery-link">
+                        <img src="https://cdn2.thecatapi.com/images/b14.jpg" alt="gallery-img" class="gallery-img">
+                    </a>
+                </li>
+                <li class="gallery-item">
+                    <a href="https://cdn2.thecatapi.com/images/MTcwNzY0NQ.gif" data-fslightbox="gallery"
+                        class="gallery-link">
+                        <img src="https://cdn2.thecatapi.com/images/MTcwNzY0NQ.gif" alt="gallery-img"
+                            class="gallery-img">
+                    </a>
+                </li>
+                <li class="gallery-item">
+                    <a href="https://cdn2.thecatapi.com/images/b7u.jpg" data-fslightbox="gallery" class="gallery-link">
+                        <img src="https://cdn2.thecatapi.com/images/b7u.jpg" alt="gallery-img" class="gallery-img">
+                    </a>
+                </li>
+                <li class="gallery-item">
+                    <a href="https://cdn2.thecatapi.com/images/MTk0NzMxNw.jpg" data-fslightbox="gallery"
+                        class="gallery-link">
+                        <img src="https://cdn2.thecatapi.com/images/MTk0NzMxNw.jpg" alt="gallery-img"
+                            class="gallery-img">
+                    </a>
+                </li>
+                <li class="gallery-item">
+                    <a href="https://cdn2.thecatapi.com/images/MWPRkZh6u.jpg" data-fslightbox="gallery"
+                        class="gallery-link">
+                        <img src="https://cdn2.thecatapi.com/images/MWPRkZh6u.jpg" alt="gallery-img"
+                            class="gallery-img">
+                    </a>
+                </li> -->
+            </ul>
+        </div>
+    </main>
+    <script defer src="./lib/fslightbox.js"></script>
+</body>
+
+</html>
